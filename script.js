@@ -7,7 +7,7 @@ const search = document.getElementById("search");
 
 async function getMovies(searchTerm) {
   const url = "http://www.omdbapi.com/?page=1&apikey="+key+`&s=${searchTerm}`;
-  const res = await fetch(`${url}`);
+  const res = await fetch(url);
   const data = await res.json();
 
   if (data.Response == "True") {
@@ -17,7 +17,7 @@ async function getMovies(searchTerm) {
 
 async function getMovieDetails(movie) {
   const APIURL = `http://www.omdbapi.com/?t=${movie}&page=1&apikey=b3c6988e`;
-  const res = await fetch(`${APIURL}`);
+  const res = await fetch(APIURL);
   const data = await res.json();
   //console.log(data);
 
