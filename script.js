@@ -6,7 +6,7 @@ const button = document.getElementById("form");
 const search = document.getElementById("search");
 
 async function getMovies(searchTerm) {
-  const url = "http://www.omdbapi.com/?page=1&apikey="+key+`&s=${searchTerm}`;
+  const url = "https://www.omdbapi.com/?page=1&apikey="+key+`&s=${searchTerm}`;
   const res = await fetch(url);
   const data = await res.json();
 
@@ -16,7 +16,7 @@ async function getMovies(searchTerm) {
 }
 
 async function getMovieDetails(movie) {
-  const APIURL = `http://www.omdbapi.com/?t=${movie}&page=1&apikey=bfd6b563`;
+  const APIURL = `https://www.omdbapi.com/?t=${movie}&page=1&apikey=bfd6b563`;
   const res = await fetch(APIURL);
   const data = await res.json();
   //console.log(data);
