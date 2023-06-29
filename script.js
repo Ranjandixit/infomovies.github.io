@@ -1,11 +1,12 @@
 const imgPath = "http://img.omdbapi.com/?apikey=b3c6988e&";
+const key="b3c6988e";
 
 const main = document.getElementById("main");
 const button = document.getElementById("form");
 const search = document.getElementById("search");
 
 async function getMovies(searchTerm) {
-  const url = `http://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=b3c6988e`;
+  const url = "http://www.omdbapi.com/?page=1&apikey="+key+`&s=${searchTerm}`;
   const res = await fetch(`${url}`);
   const data = await res.json();
 
@@ -21,7 +22,7 @@ async function getMovieDetails(movie) {
   //console.log(data);
 
 
-  
+
   main.classList.add("bg-light");
   const movieDetail = document.createElement("div");
   movieDetail.classList.add("movie-detail");
