@@ -1,5 +1,5 @@
 const imgPath = "http://img.omdbapi.com/?apikey=b3c6988e&";
-const key="b3c6988e";
+const key="bfd6b563";
 
 const main = document.getElementById("main");
 const button = document.getElementById("form");
@@ -16,7 +16,7 @@ async function getMovies(searchTerm) {
 }
 
 async function getMovieDetails(movie) {
-  const APIURL = `http://www.omdbapi.com/?t=${movie}&page=1&apikey=b3c6988e`;
+  const APIURL = `http://www.omdbapi.com/?t=${movie}&page=1&apikey=bfd6b563`;
   const res = await fetch(APIURL);
   const data = await res.json();
   //console.log(data);
